@@ -15,6 +15,7 @@ export default function TabLayout() {
 
   return (
     <Tabs
+      initialRouteName="products"
       screenOptions={{
         tabBarActiveTintColor: isDark ? '#FFFFFF' : '#007AFF',
         tabBarInactiveTintColor: '#8E8E93',
@@ -51,20 +52,6 @@ export default function TabLayout() {
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="person-outline" size={size} color={color} />
           ),
-        }}
-      />
-      
-      {/* Hide these screens from the tab bar */}
-      <Tabs.Screen
-        name="index"
-        options={{
-          href: null, // This prevents the tab from being accessible via direct URL
-        }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          href: null, // This prevents the tab from being accessible via direct URL
         }}
       />
     </Tabs>

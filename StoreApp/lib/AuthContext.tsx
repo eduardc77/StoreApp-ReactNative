@@ -216,6 +216,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
               userToken: tokens.access_token,
               userInfo,
             });
+            
+            // Redirect to products tab
+            router.replace('/(tabs)/products');
             return true;
           }
         }
